@@ -1,8 +1,9 @@
 Rails.application.routes.draw do
   devise_for :users
 
-root "pages#index"
+#root "pages#index"
 
+get '/' => 'users#index'
 get '/admin' => 'users#sign_in'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
